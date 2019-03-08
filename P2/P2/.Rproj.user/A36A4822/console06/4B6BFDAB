@@ -26,3 +26,21 @@ To https://github.com/gunplun/cs181-practicals.git
 ]0;~/cs181/cs181-practicals/P2/P21234-3:P2 MeLlamoJohn$ ls[K1234-3:P2 MeLlamoJohn$ ls
 P2.Rproj	p2.R
 ]0;~/cs181/cs181-practicals/P2/P21234-3:P2 MeLlamoJohn$ cd [K[K[Kgit p[Kad .[K[Kd .
+]0;~/cs181/cs181-practicals/P2/P21234-3:P2 MeLlamoJohn$ gitcomm[K[K[K [K[K commit -m "upd[Kp[Kdate code"
+[master 3957f18] update code
+ 7 files changed, 119 insertions(+), 12 deletions(-)
+ create mode 100644 P2/P2/.Rproj.user/A36A4822/console06/4B6BFDAB.env
+]0;~/cs181/cs181-practicals/P2/P21234-3:P2 MeLlamoJohn$ git pull
+remote: Enumerating objects: 8, done.[K
+remote: Counting objects:  12% (1/8)   [Kremote: Counting objects:  25% (2/8)   [Kremote: Counting objects:  37% (3/8)   [Kremote: Counting objects:  50% (4/8)   [Kremote: Counting objects:  62% (5/8)   [Kremote: Counting objects:  75% (6/8)   [Kremote: Counting objects:  87% (7/8)   [Kremote: Counting objects: 100% (8/8)   [Kremote: Counting objects: 100% (8/8), done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+Unpacking objects:  20% (1/5)   Unpacking objects:  40% (2/5)   Unpacking objects:  60% (3/5)   Unpacking objects:  80% (4/5)   remote: Total 5 (delta 3), reused 5 (delta 3), pack-reused 0[K
+Unpacking objects: 100% (5/5)   Unpacking objects: 100% (5/5), done.
+From https://github.com/gunplun/cs181-practicals
+   4d7ef5a..f701b8a  master     -> origin/master
+[?2004hMerge made by the 'recursive' strategy.
+ P2/classification_starter.py |   15 [32m+[m[31m-[m
+ P2/test_data.csv             | 3725 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 3739 insertions(+), 1 deletion(-)
+ create mode 100644 P2/test_data.csv
+]0;~/cs181/cs181-practicals/P2/P21234-3:P2 MeLlamoJohn$ l[Kgit add .
