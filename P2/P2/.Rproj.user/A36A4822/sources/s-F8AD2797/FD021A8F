@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551986762560.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FD021A8F",
+    "lastKnownWriteTime" : 1552006480,
+    "last_content_update" : 1552006480798,
+    "path" : "~/cs181/cs181-practicals/P2/P2/p2.R",
+    "project_path" : "p2.R",
+    "properties" : {
+        "cursorPosition" : "16,50",
+        "scrollLine" : "8",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
