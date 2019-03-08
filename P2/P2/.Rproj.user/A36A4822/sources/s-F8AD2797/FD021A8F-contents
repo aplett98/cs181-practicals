@@ -9,14 +9,16 @@ data <- read_csv("/Users/MeLlamoJohn/cs181/cs181-practicals/p2/foo.csv") %>% cle
 
 
 xs <- data %>% 
-  select(-category)
+  select(-category,-id, -x0)
 
 # model fit
 # note that you must turn the ordinal variables into factor or R wont use
 # them properly
-model <- randomForest(y=as.factor(data$category), x = xs ,ntree=100)
+model <- randomForest(y=as.factor(data$category), x = xs ,ntree=500)
 
 #plot of model accuracy by class
 plot(model)
 
 summary(model)
+
+
