@@ -294,7 +294,8 @@ if __name__ == "__main__":
 
 train_dir = "train"
 ffs = [system_call_count_feats, system_call_count_everything]
-X_train,global_feat_dict,t_train,train_ids = extract_feats(ffs, train_dir)
+
+X_train,global_feat_dict_train,t_train,train_ids = extract_feats(ffs, train_dir)
 
 print(X_train)
 classes = t_train
@@ -309,3 +310,15 @@ import pandas as pd
 df = pd.DataFrame(foo)
 df['category'] = pd.Series(classes, index=df.index)
 df.to_csv("foo.csv")
+
+
+test_dir = "test"
+
+X_test,global_feat_dict_test,t_test,test_ids = extract_feats(ffs, test_dir, global_feat_dict=global_feat_dict_train)
+test_data = X_test.todense()
+test_data.shape
+
+global_feat_dict
+
+df_test = pd.DataFrame(test_data)
+df_test.to_csv("test_data.csv")
