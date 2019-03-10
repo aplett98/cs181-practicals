@@ -318,7 +318,9 @@ X_test,global_feat_dict_test,t_test,test_ids = extract_feats(ffs, test_dir, glob
 test_data = X_test.todense()
 test_data.shape
 
-global_feat_dict
+global_feat_dict_train
 
 df_test = pd.DataFrame(test_data)
+df_test['id_hash'] = pd.Series(test_ids, index=df_test.index)
 df_test.to_csv("test_data.csv")
+test_ids
