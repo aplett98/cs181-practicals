@@ -323,4 +323,3 @@ global_feat_dict_train
 df_test = pd.DataFrame(test_data)
 df_test['id_hash'] = pd.Series(test_ids, index=df_test.index)
 df_test.to_csv("test_data.csv")
-test_ids
