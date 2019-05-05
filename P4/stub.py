@@ -11,15 +11,40 @@ class Learner(object):
     This agent jumps randomly.
     '''
 
-    def __init__(self):
+    def __init__(self, gamma=0.6, epsilon=0.1, eta=0.5):
         self.last_state = None
         self.last_action = None
         self.last_reward = None
+
+        # hyperparameters
+        self.gamma = gamma
+        self.epsilon = epsilon
+        self.eta = eta
+
+        # linear approximation setup
+        self.d = 8  # dim(S)=7, dim(A)=1 -> dim(S x A) = 8
+        self.w = np.ones(self.d)  # weights for linear approximation
 
     def reset(self):
         self.last_state = None
         self.last_action = None
         self.last_reward = None
+        self.gravity = 2
+
+    def _phi(self, state, action):
+        '''This will be the basis function for linear approximation.'''
+        return np.array(
+            [
+                action,
+                self.gravity,
+                state["score"],
+                state["tree"]["dist"],
+                state["tree"]["top"],
+                state["tree"]["bot"],
+                state["monkey"]["vel"],
+                state["monkey"]["top"]
+            ]
+        )
 
     def action_callback(self, state):
         '''
