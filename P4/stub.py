@@ -11,7 +11,7 @@ class Learner(object):
     This agent jumps randomly.
     '''
 
-    def __init__(self, gamma=0.4, epsilon=0.5, eta=0.91):
+    def __init__(self, gamma=0.6, epsilon=0.5, eta=0.91, xbins=10, ybins=5):
         self.last_state = None
         self.last_action = None
         self.last_reward = None
@@ -24,8 +24,8 @@ class Learner(object):
         self.eta = eta
 
         # q-learning setup
-        self.ybins = np.linspace(-150, 150, 5, dtype=int)
-        self.xbins = np.linspace(0, 500, 8, dtype=int)
+        self.ybins = np.linspace(-150, 150, ybins, dtype=int)
+        self.xbins = np.linspace(0, 500, xbins, dtype=int)
         self.gbins = np.array([1, 4])
         self.vbins = np.linspace(-30, 30, 3, dtype=int)
         self.lookup = {}
